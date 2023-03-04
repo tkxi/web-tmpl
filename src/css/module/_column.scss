@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.m-column {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  &--xxxl { max-width: 1680px; }
+  &--xxl { max-width : 1440px; }
+  &--xl { max-width  : 1280px; }
+  &--l { max-width   : 1024px; }
+  &--base { max-width: 960px; }
+  &--m { max-width   : 768px; }
+  &--s { max-width   : 640px; }
+}
+
+@for $i from 1 through 12 {
+  .m-column--#{$i} {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: #{$i * 160}px;
+  }
+  .m-column._--#{$i} {
+      max-width: #{$i * 160}px;
+  }
+}
+
+// [カラムで必ず必要] ==============================
+.m-row {
+  margin: -10px -10px 1.25em;
+
+  @include gt-tb{
+    display: flex;
+    margin: -20px -20px 1.25em;
+  }
+
+  &._flex {
+    display: flex;
+
+    // >* {
+    //   flex-grow: 0;
+    // }
+  }
+
+  &._wrap {
+    flex-wrap: wrap;
+  }
+
+  &._center {
+    justify-content: center;
+  }
+
+  &._grow {
+    >.m-col {
+      flex-grow: 1;
+    }
+  }
+}
+
+// [個々のカラムサイズ] ==============================
+.m-col {
+  margin: 0;
+  padding: 10px;
+
+  @include gt-tb{
+    padding: 20px;
+  }
+}
+
+@for $i from 1 through 12 {
+  .m-col--#{$i} {
+    @extend .m-col;
+    @include gt-tb{
+      width: calc(100% / 12 * #{$i});
+    }
+  }
+
+  .m-push--#{$i} {
+    @include gt-tb{
+      margin-left: calc(100% / 12 * #{$i});
+    }
+  }
+
+  .m-pull--#{$i} {
+    @include gt-tb{
+      margin-right: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+
+// [カラムinner] ==============================
+.m-col__inner {}
+
+.dev [class^="c-col--"] {
+  // border: 1px dashed #ccc;
+
+  .m-col__inner {
+    background: #f2f2f2;
+  }
+}

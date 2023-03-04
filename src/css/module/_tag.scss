@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.m-tag01 {
+  display: inline-block;
+  min-width: 72px;
+  padding: 6px;
+  margin-right: 1em;
+  background: $c-green01;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: $siro;
+  text-align: center;
+}

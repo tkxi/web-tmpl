@@ -1,0 +1,39 @@
+extends ./_inc/_template_default
+
+append vars
+  //- ページ情報
+  -
+    var page = {
+      title      : site.title,
+      subtitle   : '',
+      description: site.description,
+      keyword    : site.keywords,
+      id         : 'home',
+      classes    : ['is-intro']
+    }
+  //- - var pageTitle       = page.title;
+  - var pageDescription  = page.description;
+  - var pageKeywords     = page.keyword;
+  - var pageAbsolutePath = '/';
+  //- - var pageOgpTitle = pageTitle;
+  - var pageOgpImage     = site.ogpImage;
+  - var pageOgpType      = 'website';
+  - var theme            = site.theme;
+  - var assets           = theme+'assets';
+  - var img              = theme+'assets/img';
+
+block content
+  .m-intro
+
+  main.l-main(role="main")
+    section.m-hero
+    section.p-home__block01
+
+block breadcrumb
+  nav(aria-label="Breadcrumb")
+    +breadcrumb([
+      ["ホーム", "/"]
+    ])
+
+//- append script
+  script.

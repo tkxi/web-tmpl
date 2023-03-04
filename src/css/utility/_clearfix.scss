@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+// clear fix
+.u-clr { clear: both; }
+.u-cf { @include clearfix(); }

@@ -1,0 +1,42 @@
+{
+  "name": "web-tmpl",
+  "version": "0.0.1",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build --production",
+    "makefile": "gulp makefile",
+    "watch": "gulp watch",
+    "default": "gulp default"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "css-declaration-sorter": "^6.3.1",
+    "css-mqpacker": "^7.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-mode": "^1.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "^0.0.2",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "jquery": "^3.6.3",
+    "modaal": "^0.4.4",
+    "slick-carousel": "^1.8.1"
+  }
+}

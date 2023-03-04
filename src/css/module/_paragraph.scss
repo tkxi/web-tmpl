@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.m-par01 {
+  margin: 1.75em auto;
+  line-height: 2;
+
+  @include gt-tb{
+    margin: 2em auto;
+  }
+}

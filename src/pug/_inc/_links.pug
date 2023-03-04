@@ -1,0 +1,39 @@
+-
+  var links = {
+    home       : '/',
+    about      : '/about/',
+    faq        : '/faq/',
+    access     : '/access',
+    contact    : {
+      index    : '/contact/',
+      confirm  : '/contact/confirm/',
+      complete : '/contact/complete/'
+    },
+    news       : {
+      index    : '/news/',
+      article  : '/news/article/',
+      category : '/news/category/info/',
+      topic    : '/news/category/topic/',
+    },
+    sns        : {
+      facebook : 'https://www.facebook.com/xxxxx/',
+      insta    : 'https://www.instagram.com/xxxxx/',
+      line     : ''
+    },
+    external   : {
+      a: 'https://google.com/',
+      b: 'https://google.co.jp/',
+      c: 'https://www.google.co.jp/maps/'
+    }
+  }
+
+//- gtag.js
+-
+  var events = {
+    //- キャンペーンバナー等
+    campaign01: "gtag('event', 'click', {'event_category': 'banner', 'event_label': 'campaign202x01', 'value': '1'});",
+    campaign02: "gtag('event', 'click', {'event_category': 'banner', 'event_label': 'campaign202x02', 'value': '1'});",
+
+    //- お問い合わせ
+    inquriy: "gtag('event', 'click', {'event_category': 'link', 'event_label': 'inquriy', 'value': '1'});",
+  }

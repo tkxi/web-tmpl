@@ -1,0 +1,64 @@
+.l-pageup {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  z-index: z('pageup');
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+
+  @include gt-tb{
+    bottom: 20px;
+  }
+
+  @media print{
+    display: none;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__btn {
+    // position: relative;
+    appearance: none;
+    outline: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    overflow: hidden;
+    border: 1px solid $mono-200;
+    border-radius: 50%;
+    background: $siro;
+    box-shadow: $shadow-box;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &::before{
+      content: '';
+      // position: absolute;
+      width: 10px;
+      height: 10px;
+      margin-top: 4px;
+      transform: rotate(-45deg);
+      border: solid $c-green01;
+      border-width: 3px 3px 0 0 ;
+      transition: border-color 0.2s;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $c-active;
+      &::before {
+        border-color: $c-active;
+      }
+    }
+  }
+}

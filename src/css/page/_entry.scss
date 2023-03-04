@@ -1,0 +1,115 @@
+// [Wordpress Style] ==============================
+
+// .entry__body {
+//   margin-bottom: 40px;
+// }
+
+.eye-catch {
+  max-width: 1240px;
+  margin: 0 auto 1.5em;
+  padding: 0;
+  text-align: center;
+
+  @include gt-tb{
+    margin: 0 auto 2em;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.wp-block-embed {
+  text-align: center;
+
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// [Entry Contents] ==============================
+
+.p-entry {
+  max-width: 1240px;
+  margin: 0 auto 3em;
+
+  @include gt-tb{
+    margin: 0 auto 6em;
+  }
+
+  & + & {
+    padding-top: 3em;
+    border-top: 1px solid $c-border;
+
+    @include gt-tb{
+      padding-top: 6em;
+    }
+  }
+
+  &__content {
+    // margin-top: 4em;
+
+    &:first-child,
+    &._first {
+      margin-top: 0;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      margin: 3em 0 1em;
+      font-weight: 600;
+      line-height: 1.25;
+
+      // &:first-child,
+      &._first {
+        margin-top: 0;
+      }
+
+      &._center {
+        text-align: center;
+      }
+    }
+
+    h1 {
+    }
+
+    h2 {
+    }
+
+    h3 {
+    }
+
+    h4 {
+    }
+
+    h5 {
+    }
+
+    h6 {
+    }
+
+    img {
+      border-radius: 4px;
+    }
+
+    figure {
+      margin: 0 0 2em;
+      padding: 0;
+    }
+
+    p {
+      margin: 0 auto 2em;
+      font-size: 1.6rem;
+      line-height: 2;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include gt-tb{
+        // font-size: 1.6rem;
+      }
+    }
+  }
+
+}

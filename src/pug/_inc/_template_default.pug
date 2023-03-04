@@ -1,0 +1,47 @@
+doctype html
+
+include ./mixin/_import
+
+block vars
+  include ./_info
+  include ./_links
+
+html(lang="ja")
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# " + pageOgpType + ": http://ogp.me/ns/" + pageOgpType + "#")
+    include ./parts/_head
+
+    block meta
+
+    block css
+      include ./parts/_css
+
+    block script_head
+      include ./parts/_script-analytics
+
+  body(data-page=page.id, class=[page.id, 'p-'+page.id], class=page.classes)
+    .f-overlay(aria-hidden="true")
+    .f-wrap
+      block header
+        include ./parts/_header
+
+      block side
+
+      block content
+
+      block sitemap
+        include ./parts/_sitemap
+
+      block breadcrumb
+        //- mixin
+
+      block footer
+        include ./parts/_footer
+
+      block pageup
+        include ./parts/_pageup
+
+      block floating
+
+    //- JS
+    block script
+      include ./parts/_script

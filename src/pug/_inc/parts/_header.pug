@@ -1,0 +1,21 @@
+include ../_links
+header.l-hdr(role="banner")
+  .l-hdr__main
+    .l-hdr__logo
+      a(href=links.home)
+        //- img(src=site.img+"common/logo.svg", alt=site.title+site.subtitle)
+    nav.l-hdr__nav(role="navigation", aria-label="ヘッダーメニュー")
+      ul.l-hdr__nav-list
+        li: a(href=links.about) ABOUT
+        li.menu-item-has-children
+          a(href="#") AAAAA
+          ul
+            li: a(href="#") aaaaa
+        li.menu-item-has-children
+          a(href="#") BBBBB
+          ul
+            li: a(href="#") bbbbb
+            li: a(href="#") bbbb
+            li: a(href="#") bbb
+        li: a(href=links.access) CCCCC
+        li: a(href=links.contact) DDDDD

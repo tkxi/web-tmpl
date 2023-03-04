@@ -1,0 +1,9 @@
+{
+  "liveServer.settings.root": "/dist",
+  "liveServer.settings.mount": [
+    // ["/", "/dist"]
+  ],
+  "liveServer.settings.useLocalIp": true,
+  "liveServer.settings.port": 0,
+  "liveServer.settings.wait": 1000
+}

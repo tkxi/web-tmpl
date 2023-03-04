@@ -1,0 +1,19 @@
+include ../_links
+include ../_info
+nav.l-nav(role="navigation", aria-label="ヘッダーメニュー一覧")
+  .l-nav_list
+    ul
+      li: a(href=links.home) ホーム
+      li: a(href=links.about) ABOUT
+      li.menu-item-has-children
+        a(href="#") AAAAA
+        ul
+          li: a(href="#") aaaaa
+      li.menu-item-has-children
+        a(href="#") BBBBB
+        ul
+          li: a(href="#") bbbbb
+          li: a(href="#") bbbb
+          li: a(href="#") bbb
+      li: a(href=links.access) CCCCC
+      li: a(href=links.contact) DDDDD

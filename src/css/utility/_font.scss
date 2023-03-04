@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+// font fixed size
+@for $i from 10 through 30 {
+  .u-fs--#{$i} { font-size: #{math.div($i, 10)}rem; }
+}
+
+// font option
+.u-tx-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u-tx-kerning {
+  font-feature-settings: 'palt' 1;
+}
+
+.u-tx--ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.u-tx--del {
+  text-decoration: line-through;
+}
+
+.u-tx--nowrap {
+  white-space: nowrap;
+}
+
+.u-tx--normal {
+  font-weight: normal;
+}
+
+.u-tx--bold {
+  font-weight: 600;
+}
+
+.u-tx--entity {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.u-tx-family--go {
+  font-family: $family-gothic;
+}
+
+.u-tx-family--mi {
+  font-family: $family-mincho;
+}
+
+.u-tx--red {
+  color: red;
+}
+
+.u-tx--blue {
+  color: $c-blue02;
+}
+
+.u-tx--marker {
+  background: $c-marker;
+}
+
+.u-tx--en {
+  font-family: 'Robot', Arial, Helvetica, sans-serif;
+}
+
+// ルビ
+// ex). <ruby data-ruby="ルビ">RUBY<rt>ルビ</rt></ruby>
+[data-ruby] {
+  position: relative;
+
+  &::before {
+    content: attr(data-ruby);
+    position: absolute;
+    top: -1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0.5em;
+    white-space: nowrap;
+    font-feature-settings: 'palt' 1;
+  }
+
+  rt {
+    display: none;
+  }
+}

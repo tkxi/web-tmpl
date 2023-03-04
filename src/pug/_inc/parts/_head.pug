@@ -1,0 +1,52 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width")
+meta(name="format-detection" content="telephone=no")
+meta(name="theme-color" content="#ffffff")
+meta(http-equiv="Pragma" content="no-cache")
+meta(http-equiv="Cache-Control" content="no-cache")
+
+//- Title
+if pageTitle
+  title #{pageTitle} | 「#{site.title}」#{site.subtitle}
+else
+  title #{site.title} - #{site.subtitle}
+
+//- Description
+meta(name="description", content=pageDescription)
+
+//- Keywords
+//- if pageKeywords
+//-   meta(name="keywords", content=pageKeywords)
+
+//- Cache Control
+//- meta(http-equiv="Pragma" content="no-cache")
+//- meta(http-equiv="Cache-Control" content="no-cache")
+
+link(rel="canonical" href=site.url + pageAbsolutePath)
+link(rel="apple-touch-icon" href="/apple-touch-icon-180x180.png")
+link(rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon")
+link(rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon")
+
+//- OGP
+if pageOgpTitle
+  meta(property="og:title" content=pageOgpTitle + ' | ' + site.title)
+else
+  meta(property="og:title" content=site.title)
+meta(property="og:type" content=pageOgpType)
+meta(property="og:image" content=site.url + pageOgpImage)
+meta(property="og:url" content=site.url + pageAbsolutePath)
+meta(property="og:description" content=pageDescription)
+meta(property="og:site_name" content=site.title + ' - ' + site.subtitle)
+meta(property="og:locale" content="ja")
+
+//- OGP Option
+if site.fbAppId
+  meta(property="fb:app_id" content=site.fbAppId)
+else if site.fbAdmins
+  meta(property="fb:admins" content=site.fbAdmins)
+
+if site.twitterCard
+  meta(name="twitter:card" content=site.twitterCard)
+if site.twitterSite
+  meta(name="twitter:site" content=site.twitterSite)

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.is-pc {
+  display: none;
+
+  @include gt-pc{
+    display: block;
+  }
+}
+
+.is-tb {
+  display: none;
+
+  @include mq-min-max($bp-tb, $bp-pc - 1){
+    display: block;
+  }
+}
+
+.is-sp {
+  display: block;
+
+  @include gt-tb{
+    display: none;
+  }
+}
+
+.is-gt-tb {
+  display: none;
+
+  @include gt-tb{
+    display: block;
+  }
+}
+
+.is-gt-pc {
+  display: none;
+
+  @include gt-pc{
+    display: block;
+  }
+}
+
+.is-gt-xpc {
+  display: none;
+
+  @include gt-xpc{
+    display: block;
+  }
+}

@@ -1,0 +1,141 @@
+extends ../_inc/_template_default
+
+append vars
+  //- ページ情報
+  -
+    var page = {
+      title      : 'フォーマット',
+      subtitle   : 'サブタイトル',
+      description: site.description,
+      keyword    : site.keywords,
+      id         : 'format',
+      classes    : ['']
+    };
+
+  - var pageTitle        = page.title;
+  - var pageSubTitle     = page.subtitle;
+  - var pageDescription  = site.title + 'の「' + page.title + '」ページです。' + page.description;
+  - var pageKeywords     = page.title + ',' + page.keyword;
+  - var pageAbsolutePath = '/format/';
+  - var pageOgpTitle     = pageTitle;
+  - var pageOgpImage     = site.ogpImage;
+  - var pageOgpType      = 'article';
+  - var theme            = site.theme;
+  - var assets           = theme+'assets';
+  - var img              = theme+'assets/img';
+
+block content
+
+  main.l-main(role="main")
+    .l-main__head
+      .l-main__ttl
+        if page.subtitle
+          .l-main__sttl #{page.subtitle}
+        h1 #{page.title}
+
+    .l-main__body
+      article.p-entry
+        .p-entry__title.p-entry__content
+          h1._first 記事タイトル記事タイトル記事タイトル
+        .p-entry__body.p-entry__content
+          figure.eye-catch
+            img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          .m-row._flex._center._grow
+            .m-col
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          .m-row._flex._center
+            .m-col--4
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col--4
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col--4
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          .m-row._flex._center._grow
+            .m-col
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          figure
+            img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+        .p-entry__title
+          h2 h2タイトル
+        .p-entry__body
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          .m-row
+            .m-col--6
+              p.u-mb--0 ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+            .m-col--6
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+          .m-row
+            .m-col--6
+              img(src=img+"/common/dummy-3x2.svg", width="100%", alt="")
+            .m-col--6
+              p.u-mb--0 ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+        .p-entry__title
+          h3 h3タイトル
+        .p-entry__body
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。
+        .p-entry__title
+          h4 h4タイトル
+        .p-entry__body
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。
+        .p-entry__title
+          h5 h5タイトル
+        .p-entry__body
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。
+        .p-entry__title
+          h6 h6タイトル
+        .p-entry__body
+          p ダミーテキスト。ダミーテキスト。ダミーテキスト。
+          .m-gallery
+            ul
+              li
+                a(href="/assets/img/common/dummy-1x1.svg").is-modaal-img
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+              li
+                a(href="#")
+                  img(src=img+"/common/dummy-1x1.svg", width="100%", alt="")
+      .m-section-end
+
+
+block breadcrumb
+  +breadcrumb([
+    ["ホーム", "/"],
+    [page.title, pageAbsolutePath]
+  ])
+//- append script
+  script.
+    (function($) {
+      $(function() {
+        //-
+      })
+    })(jQuery);

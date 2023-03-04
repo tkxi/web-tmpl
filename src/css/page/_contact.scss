@@ -1,0 +1,63 @@
+.p-contact {
+
+  &__form {
+  }
+
+  &__radio-list,
+  &__check-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    >li {
+      width: 50%;
+
+      &:nth-child(odd) {
+        padding: 0 0.75em 0 0;
+      }
+
+      @include gt-tb{
+        width: calc(100% / 3);
+        padding: 0 0.75em 0 0;
+
+        &:nth-child(3n) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__privacy {
+    padding: 10px;
+    background: $siro;
+    border-radius: 5px;
+    border: 0;
+
+    &-inner {
+      height: 240px;
+      overflow: auto;
+      outline: 0;
+      -webkit-overflow-scrolling: touch;
+
+      * {
+        font-size: 1.2rem !important;
+        line-height: 1.5 !important;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #eee;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+        border-radius: 5px;
+      }
+    }
+  }
+}

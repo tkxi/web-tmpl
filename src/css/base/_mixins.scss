@@ -1,0 +1,117 @@
+// ==============================
+// Media Query
+// ==============================
+@mixin mq-max($max) {
+  @media (max-width: $max){
+    @content;
+  }
+}
+
+@mixin mq-min($min) {
+  @media (min-width: $min){
+    @content;
+  }
+}
+
+@mixin mq-min-max($min, $max) {
+  @media (min-width: $min) and (max-width: $max){
+    @content;
+  }
+}
+
+@mixin mq-resolution($ratio:2, $resolution:2) {
+  @media (-webkit-min-device-pixel-ratio: $ratio), (min-resolution: ((72 * $resolution) + 'dpi')) {
+    @content;
+  }
+}
+
+@mixin reso2() {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    @content;
+  }
+}
+
+@mixin reso3() {
+  @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 216dpi) {
+    @content;
+  }
+}
+
+@mixin lt-tb() {
+  @media (max-width: ($bp-tb - 1)) {
+    @content;
+  }
+}
+
+@mixin lt-pc() {
+  @media (max-width: ($bp-pc - 1)) {
+    @content;
+  }
+}
+
+@mixin gt-xsp() {
+  @media (min-width: $bp-xsp) {
+    @content;
+  }
+}
+
+@mixin gt-pb() {
+  @media (min-width: $bp-pb) {
+    @content;
+  }
+}
+
+@mixin gt-sp() {
+  @media (min-width: $bp-sp) {
+    @content;
+  }
+}
+
+@mixin gt-tb() {
+  @media (min-width: $bp-tb) {
+    @content;
+  }
+}
+
+@mixin gt-main() {
+  @media (min-width: $bp-main) {
+    @content;
+  }
+}
+
+@mixin gt-pc() {
+  @media (min-width: $bp-pc) {
+    @content;
+  }
+}
+
+@mixin gt-xpc() {
+  @media (min-width: $bp-xpc) {
+    @content;
+  }
+}
+
+@mixin gt-xxpc() {
+  @media (min-width: $bp-xxpc) {
+    @content;
+  }
+}
+
+@mixin gt-xxxpc() {
+  @media (min-width: $bp-xxxpc) {
+    @content;
+  }
+}
+
+// ==============================
+// Clearfix
+// ==============================
+@mixin clearfix() {
+  zoom: 1;
+
+  &:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

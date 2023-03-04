@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+.mw_wp_form {
+  /**
+   * error message
+   */
+  .error {
+    font-size : 93%;
+    color : #B70000;
+    display : block;
+  }
+
+  /**
+   * error message of akismet
+   */
+  .akismet_error {
+    display: block;
+  }
+
+  /**
+   * vertical style of radio and checkbox
+   */
+  .vertical-item {
+    display: block;
+
+    + .vertical-item {
+      margin-top: 0;
+    }
+  }
+
+  /**
+   * horizontal style of radio and checkbox
+   */
+  .horizontal-item + .horizontal-item {
+    margin-left: 10px;
+  }
+
+  /**
+   * datepicker
+   */
+  .ui-datepicker .ui-datepicker-title select {
+    &.ui-datepicker-month,
+    &.ui-datepicker-year {
+      width: 40%;
+      margin: 0 5px;
+    }
+  }
+
+  /**
+   * file
+   */
+  .mw_wp_form input[type="file"] {
+    display: inline-block;
+  }
+}
+
+.mwform {
+  /**
+   * radio and checkbox
+   */
+  &-checkbox-field,
+  &-radio-field {
+    label {
+      // font-weight: normal;
+      // margin-bottom: 0;
+    }
+  }
+
+  &-checkbox-field,
+  &-radio-field {
+    width: 50%;
+
+    &:nth-child(odd) {
+      padding: 0 0.75em 0 0;
+    }
+
+    @include gt-tb{
+      width: calc(100% / 3);
+      padding: 0 0.75em 0 0;
+
+      &:nth-child(3n) {
+        padding: 0;
+      }
+    }
+
+    label {
+      position: relative;
+      display: inline-block;
+      margin: 0.5em 0;
+      line-height: 1.5;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+
+      &:checked {
+        + .mwform-checkbox-field-text,
+        + .mwform-radio-field-text {
+          &::before {
+            border-color: $c-green01;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    // &-text {
+    //   display: inline-flex;
+    //   align-items: center;
+    //   font-weight: bold;
+    //   font-size: 1.4rem;
+    //   line-height: math.div(24, 14);
+    //   padding: 0 0 0 30px;
+    //   min-height: 24px;
+    //   cursor: pointer;
+
+    //   @include gt-tb{
+    //     font-size: 1.6rem;
+    //     line-height: math.div(24, 16);
+    //   }
+
+    //   &::before,
+    //   &::after {
+    //     content: '';
+    //     position: absolute;
+    //     border-radius: 50%;
+    //     transition: .25s;
+    //   }
+
+    //   &::before {
+    //     background: $siro;
+    //     border: 2px solid $mono-400;
+    //     top: 0;
+    //     left: 0;
+    //     width: 24px;
+    //     height: 24px;
+    //   }
+
+    //   &::after {
+    //     background: $c-green01;
+    //     opacity: 0;
+    //     top: 7px;
+    //     left: 7px;
+    //     width: 10px;
+    //     height: 10px;
+    //   }
+    // }
+  }
+
+  &-checkbox-field {
+    &-text {
+      display: inline-flex;
+      align-items: center;
+      font-size: 1.4rem;
+      line-height: math.div(24, 14);
+      font-weight: bold;
+      padding: 0 0 0 30px;
+      min-height: 24px;
+
+      @include gt-pb{
+        font-size: 1.6rem;
+        line-height: math.div(24, 16);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        transition: .25s;
+      }
+
+      &::before {
+        background: $siro;
+        border-radius: 3px;
+        border: 2px solid $mono-400;
+      }
+
+      &::after {
+        background: url(#{$img}/common/ico-check.svg) no-repeat center center / 12px auto;
+        opacity: 0;
+      }
+    }
+  }
+
+  &-radio-field {
+    &-text {
+      display: inline-flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: math.div(24, 14);
+      padding: 0 0 0 30px;
+      min-height: 24px;
+      cursor: pointer;
+
+      @include gt-tb{
+        font-size: 1.6rem;
+        line-height: math.div(24, 16);
+      }
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        transition: .25s;
+      }
+
+      &::before {
+        background: $siro;
+        border: 2px solid $mono-400;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+      }
+
+      &::after {
+        background: $c-green01;
+        opacity: 0;
+        top: 7px;
+        left: 7px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+
+
+  /**
+   * file delete button
+   */
+  &-file-delete {
+    cursor: pointer;
+    visibility: hidden;
+  }
+
+  /**
+   * tel and zip
+   */
+  &-tel-field,
+  &-zip-field {
+    input[type="text"] {
+      display: inline-block;
+      width: auto;
+    }
+  }
+}
+
+/**
+ * deprecated message
+ */
+.mw-wp-form-deprecated-message {
+	background: #fdeeee;
+	border: 1px solid #f7bdb8;
+	border-radius: 5px;
+	color: #af4040;
+	font-size: 13px;
+	line-height: 1.6;
+	margin: 0 0 10px;
+	padding: 1em;
+}

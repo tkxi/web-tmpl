@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+// [base] ==============================
+.m-btn {
+  appearance: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  display: inline-block;
+  max-width: 100%;
+  width: 280px;
+  padding: 15px;
+  background-color: $c-green01;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  border-radius: 100px;
+  outline: 0;
+
+  font-feature-settings: 'palt' 1;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: math.div(24, 16);
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 2px 0 rgba($kuro, 0.05);
+  vertical-align: middle;
+  color: $siro;
+
+  transition: background-color .2s, color .2s;
+  cursor: pointer;
+  user-select: none;
+
+  @include gt-tb{
+    padding: 25px;
+    font-size: 1.8rem;
+    line-height: math.div(24, 18);
+  }
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus,
+  &:disabled {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $siro;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $siro;
+    border-color: $c-green01;
+    color: $c-green01;
+  }
+
+  &:disabled {
+    opacity: .5;
+    filter: grayscale(100%);
+    pointer-events: none;
+    user-select: none;
+    cursor: default;
+  }
+
+  &.line {
+    background-color: $siro;
+    color: $c-red01;
+
+    &:visited {
+      background-color: $siro;
+      color: $c-red01;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $c-red01;
+      color: $siro;
+    }
+  }
+
+  &._240 {
+    width: 240px;
+  }
+
+  &._200 {
+    width: 100%;
+    max-width: 200px;
+    padding: 15px;
+
+    @include gt-tb{
+      padding: 20px;
+    }
+  }
+
+  &._md {
+    width: 200px;
+    padding: 14px;
+    font-size: 1.6rem;
+    line-height: 1;
+    border-width: 1px;
+  }
+
+  &._sm {
+    width: 60px;
+    padding: 3px;
+    font-size: 1.2rem;
+    line-height: 1;
+    border-width: 1px;
+  }
+
+  &._va-t { vertical-align: top; }
+  &._va-m { vertical-align: middle; }
+  &._va-b { vertical-align: bottom; }
+  &._va-bl { vertical-align: baseline; }
+
+  &._noshadow {
+    box-shadow: none;
+  }
+
+  &._margin {
+    margin: 10px;
+  }
+}
+
+
+// [type] ==============================

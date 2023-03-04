@@ -1,0 +1,508 @@
+/* !-------- WORDPRESS CLASSES ------------------- */
+/*------------------------------------------------------------ *\
+\*------------------------------------------------------------ */
+
+/* !-- WP WYSIWYG Editor Styles -- */
+.entry-content img {
+  margin: 0 0 1.5em 0;
+}
+
+.alignleft,
+img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+
+.alignright,
+img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+
+.aligncenter,
+img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+.alignnone,
+img.alignnone {
+  /* not sure about this one */
+}
+
+.wp-caption {
+  margin-bottom: 1.5em;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  padding: 0;
+  margin: 0;
+}
+
+.wp-caption p.wp-caption-text {
+  line-height: 1.5;
+  font-size: 10px;
+  margin: 0;
+}
+
+.wp-smiley {
+  margin: 0 !important;
+  max-height: 1em;
+}
+
+blockquote.left {
+  margin-right: 20px;
+  text-align: right;
+  margin-left: 0;
+  width: 33%;
+  float: left;
+}
+
+blockquote.right {
+  margin-left: 20px;
+  text-align: left;
+  margin-right: 0;
+  width: 33%;
+  float: right;
+}
+
+.gallery {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  &-item,
+  dl {
+    flex-grow: 0;
+    width: 50%;
+    padding: 2px;
+
+    @include gt-tb{
+      width: calc(100% / 6);
+    }
+
+    dt, dd {
+      display: inline-block;
+    }
+
+    a {
+
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-caption {}
+}
+
+.size-full {}
+.size-large {}
+.size-medium {}
+.size-thumbnail {}
+
+
+/* !-- WP Widgets Default -- */
+.widget {}
+
+/* links widget */
+.widget_links {}
+.widget_links ul {}
+.widget_links ul li {}
+.widget_links ul li a {}
+
+/* meta widget */
+.widget_meta {}
+.widget_meta ul {}
+.widget_meta ul li {}
+.widget_meta ul li a {}
+
+/* pages widget */
+.widget_pages {}
+.widget_pages ul {}
+.widget_pages ul li {}
+.widget_pages ul li a {}
+
+/* recent-posts widget */
+.widget_recent_entries {}
+.widget_recent_entries ul {}
+.widget_recent_entries ul li {}
+.widget_recent_entries ul li a {}
+
+/* archives widget */
+.widget_archive {}
+.widget_archive ul {}
+.widget_archive ul li {}
+.widget_archive ul li a {}
+.widget_archive select {}
+.widget_archive option {}
+
+/* tag-cloud widget */
+.widget_links {}
+.widget_links li:after {}
+.widget_links li:before {}
+.widget_tag_cloud {}
+.widget_tag_cloud a {}
+.widget_tag_cloud a:after {}
+.widget_tag_cloud a:before {}
+
+/* calendar widget */
+.widget_calendar {}
+#calendar_wrap {}
+#calendar_wrap th {}
+#calendar_wrap td {}
+#wp-calendar tr td {}
+#wp-calendar caption {}
+#wp-calendar a {}
+#wp-calendar #today {}
+#wp-calendar #prev {}
+#wp-calendar #next {}
+#wp-calendar #next a {}
+#wp-calendar #prev a {}
+
+/* category widget */
+.widget_categories {}
+.widget_categories ul {}
+.widget_categories ul li {}
+.widget_categories ul ul.children {}
+.widget_categories a {}
+.widget_categories select{}
+.widget_categories select#cat {}
+.widget_categories select.postform {}
+.widget_categories option {}
+.widget_categories .level-0 {}
+.widget_categories .level-1 {}
+.widget_categories .level-2 {}
+.widget_categories .level-3 {}
+
+/* recent-comments widget */
+.recentcomments {}
+#recentcomments {}
+#recentcomments li {}
+#recentcomments li a {}
+.widget_recent_comments {}
+
+/* search widget */
+#searchform {}
+.widget_search {}
+.screen-reader-text {}
+
+/* text widget */
+.textwidget {}
+.widget_text {}
+.textwidget p {}
+
+
+/* !-- WP Comment Styles -- */
+.commentlist .reply {}
+.commentlist .reply a {}
+
+.commentlist .alt {}
+.commentlist .odd {}
+.commentlist .even {}
+.commentlist .thread-alt {}
+.commentlist .thread-odd {}
+.commentlist .thread-even {}
+.commentlist li ul.children .alt {}
+.commentlist li ul.children .odd {}
+.commentlist li ul.children .even {}
+
+.commentlist .vcard {}
+.commentlist .vcard cite.fn {}
+.commentlist .vcard span.says {}
+.commentlist .vcard img.photo {}
+.commentlist .vcard img.avatar {}
+.commentlist .vcard cite.fn a.url {}
+
+.commentlist .comment-meta {}
+.commentlist .comment-meta a {}
+.commentlist .commentmetadata {}
+.commentlist .commentmetadata a {}
+
+.commentlist .parent {}
+.commentlist .comment {}
+.commentlist .children {}
+.commentlist .pingback {}
+.commentlist .bypostauthor {}
+.commentlist .comment-author {}
+.commentlist .comment-author-admin {}
+
+.commentlist {}
+.commentlist li {}
+.commentlist li p {}
+.commentlist li ul {}
+.commentlist li ul.children li {}
+.commentlist li ul.children li.alt {}
+.commentlist li ul.children li.byuser {}
+.commentlist li ul.children li.comment {}
+// .commentlist li ul.children li.depth-{id} {}
+.commentlist li ul.children li.bypostauthor {}
+.commentlist li ul.children li.comment-author-admin {}
+
+#cancel-comment-reply {}
+#cancel-comment-reply a {}
+
+
+/* !-- WP Miscellaneous Styles == */
+/* category links */
+li.categories {}
+li.cat-item {}
+//  li.cat-item-{id} {}
+li.current-cat {}
+li.current-cat-parent {}
+ul.children {}
+
+/* blogroll links */
+.linkcat {}
+.blogroll {}
+
+/* read-more links */
+.more-link {}
+
+
+/* !-- WP body_class() -- */
+
+.rtl {}
+.home {}
+.blog {}
+.archive {}
+.date {}
+.search {}
+.paged {}
+.attachment {}
+.error404 {}
+// .single postid-(id) {}
+// .attachmentid-(id) {}
+// .attachment-(mime-type) {}
+.author {}
+// .author-(user_nicename) {}
+.category {}
+// .category-(slug) {}
+.tag {}
+// .tag-(slug) {}
+.page-parent {}
+// .page-child parent-pageid-(id) {}
+// .page-template page-template-(template file name) {}
+.search-results {}
+.search-no-results {}
+.logged-in {}
+// .paged-(page number) {}
+// .single-paged-(page number) {}
+// .page-paged-(page number) {}
+// .category-paged-(page number) {}
+// .tag-paged-(page number) {}
+// .date-paged-(page number) {}
+// .author-paged-(page number) {}
+// .search-paged-(page number) {}
+
+
+/* !-- WP post_class() -- */
+
+.post-id {}
+.post {}
+.page {}
+.attachment {}
+.sticky {}
+.hentry {}
+.category-misc {}
+.category-example {}
+.tag-news {}
+.tag-wordpress {}
+.tag-markup {}
+
+
+/* !-- WP Page Listings -- */
+
+.pagenav {}               /* outermost list item */
+.page_item {}             /* any page item */
+// .page-item-{id} {}        /* specific page id */
+.current_page_item {}     /* current page */
+.current_page_parent {}   /* parent of current page */
+.current_page_ancestor {} /* any ancestor of current page */
+
+.pagenav ul,
+.pagenav .current_page_item ul,
+.pagenav .current_page_ancestor ul,
+.pagenav .current_page_ancestor .current_page_item ul,
+.pagenav .current_page_ancestor .current_page_ancestor ul,
+.pagenav .current_page_ancestor .current_page_ancestor .current_page_item ul,
+.pagenav .current_page_ancestor .current_page_ancestor .current_page_ancestor ul {}
+
+.pagenav  ul ul,
+.pagenav .current_page_item ul ul,
+.pagenav .current_page_ancestor ul ul,
+.pagenav .current_page_ancestor .current_page_item ul ul,
+.pagenav .current_page_ancestor .current_page_ancestor ul ul {}
+.pagenav .current_page_ancestor .current_page_ancestor .current_page_item ul ul,
+.pagenav .current_page_ancestor .current_page_ancestor .current_page_ancestor ul ul {}
+
+
+// [コンテンツCSS] ==============================
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignleft {
+  float: left;
+}
+
+.alignright {
+  float: right;
+}
+
+.wp-caption {
+  margin: 10px;
+  padding-top: 4px;
+  background-color: #f3f3f3;
+  border: 1px solid $c-border;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+  margin: 0;
+  padding: 0 4px 5px;
+  font-size: 1.1rem;
+  line-height: math.div(17, 11);
+}
+
+
+// [自動挿入クラス] ==============================
+.categories {}
+
+.cat-item {}
+
+.current-cat {}
+
+.current-cat-parent {}
+
+.children {}
+
+.pagenav {}
+
+.page_item {}
+
+.current_page_item {}
+
+.current_page_parent {}
+
+.current_page_ancestor {}
+
+.widget {}
+
+.widget_text {}
+
+.blogroll {}
+
+.linkcat {}
+
+
+// [すべてのメニュー項目] ==============================
+// すべてのメニュー項目に追加。
+.menu-item {}
+
+// サブ項目を持つメニュー項目に追加。
+.menu-item-has-children {}
+
+// このクラスはあらゆるメニュー項目に追加。
+// {object} は"post_type" または "taxonomy"のどちらかです。
+.menu-item-object {}
+// .menu-item-object-{object} {}
+
+// カテゴリに対応するメニュー項目に追加。
+.menu-item-object-category {}
+
+// タグに対応するメニュー項目に追加。
+.menu-item-object-tag {}
+
+// 固定ページに対応するメニュー項目に追加。
+.menu-item-object-page {}
+
+// カスタムポストタイプやカスタム分類に対応したメニュー項目に追加。
+.menu-item-object {}
+// .menu-item-object-{custom} {}
+
+// このクラスはあらゆるメニュー項目に追加。
+// {type} は"post_type" または "taxonomy"のどちらかです。
+.menu-item-type {}
+// .menu-item-type-{type} {}
+
+// このクラスはポストタイプに対応するメニュー項目に追加。
+// : i.e. static pages or custom post types.
+.menu-item-type-post_type {}
+
+// このクラスはカスタム分類に対応するメニュー項目に追加。
+// : i.e. categories, tags, or custom taxonomies.
+.menu-item-type-taxonomy {}
+
+
+// [現在のページのメニュー項目] ==============================
+// 現在表示されているページに対応するメニュー項目に追加。
+.current-menu-item {}
+
+
+// [現在のページの親メニュー項目] ==============================
+// 現在表示されているページの階層の親に対応するメニュー項目に追加。
+.current-menu-parent {}
+
+// 現在表示されているオブジェクトの階層の親に対応するメニュー項目に追加。{object}の部分は、.menu-item-object-{object}に対応する値が出力されます。
+// .current-{object}-parent {}
+
+// 現在表示されているタイプの階層の親に対応するメニュー項目に追加。 {type}の部分は、.menu-item-type-{type}に対応する値が出力されます。
+// .current-{type}-parent {}
+
+
+// [現在のページの先祖メニュー項目] ==============================
+// 現在表示されているページの階層の先祖に対応するメニュー項目に追加。
+.current-menu-ancestor {}
+
+// 現在表示されているオブジェクトの階層の先祖に対応するメニュー項目に追加。{object}の部分は、.menu-item-object-{object}に対応する値が出力されます。
+// .current-{object}-ancestor {}
+
+// 現在表示されているタイプの階層の先祖に対応するメニュー項目に追加。{type}の部分は、.menu-item-object-{type}に対応する値が出力されます。
+// .current-{type}-ancestor {}
+
+
+// [サイトのフロント ページのメニュー項目] ==============================
+// サイトのフロント ページに対応するメニュー項目に追加。
+.menu-item-home {}
+
+
+// [wp_page_menu()の下位互換性] ==============================
+// 次のクラスは wp_page_menu 関数の出力と一緒に下位互換性を維持するために追加。
+
+// このクラスは固定ページに対応するメニュー項目に追加。
+.page_item {}
+
+// このクラスはサブページを持つメニュー項目に追加。
+.page_item_has_children {}
+
+// $IDは固定ページのIDはであり、このクラスは固定ページに対応するメニュー項目を追加します。
+// .page-item-$ID {}
+
+// このクラスは現在表示されている固定ページに対応するメニュー項目に追加。
+.current_page_item {}
+
+// このクラスは現在表示されている固定ページの階層の親に対応するメニュー項目に追加。
+.current_page_parent {}
+
+// このクラスは現在表示されている固定ページの階層の先祖に対応するメニュー項目に追加。
+.current_page_ancestor {}

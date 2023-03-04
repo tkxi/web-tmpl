@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+.l-hdr {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: z('header');
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 0 15px rgba($kuro, 0.1);
+  transition: transform .4s;
+
+  @media print {
+    position: absolute;
+  }
+
+  // [Parts] ==============================
+  &__logo {
+  }
+
+  &__nav {
+
+    &-list {
+      list-style: none;
+      padding: 0;
+
+      a {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: math.div(30,16);
+        text-decoration: none;
+        color: $kuro;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $c-active;
+          text-decoration: underline;
+        }
+
+        @include gt-tb{ font-size: 1.3rem; }
+        // @include gt-xpc{ font-size: 1.4rem; }
+        @include gt-xxpc{ font-size: 1.6rem; }
+      }
+    }
+  }
+
+  &__contact {
+  }
+
+  #menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    opacity: 0;
+
+    &:focus {
+      outline-offset: -2px;
+    }
+
+    &::-webkit-search-decoration {
+      display: none;
+    }
+  }
+
+  .nav-btn-menu {
+    &, span {
+      display: inline-block;
+      transition: all .4s;
+      box-sizing: border-box;
+    }
+
+    position: relative;
+    width: 20px;
+    height: 12px;
+
+    span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $siro;
+      border-radius: 2px;
+
+      &:nth-of-type(1) { top: 0; }
+      &:nth-of-type(2) { top: 5px; }
+      &:nth-of-type(3) { bottom: 0; }
+    }
+  }
+
+  #menu:checked + .nav-btn-menu span {
+    &:nth-of-type(1) { transform: translateY(5px) rotate(-45deg); }
+    &:nth-of-type(2) { opacity: 0; }
+    &:nth-of-type(3) { transform: translateY(-5px) rotate(45deg); }
+  }
+}
+
+body.open-menu .l-hdr__sp-nav {
+  border-radius: 50% 50% 0 0;
+  transform: translate(0, 3px);
+}

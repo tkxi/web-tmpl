@@ -1,0 +1,22 @@
+.m-map {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-top: 56.25%;
+  border: 1px solid $c-border;
+  box-shadow: 0 4px 20px rgba($kuro, 0.1);
+
+  &__embed {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  }
+}

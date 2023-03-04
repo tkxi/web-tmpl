@@ -1,0 +1,235 @@
+@charset "UTF-8";
+// Variables
+
+// ==============================
+// Path
+// ==============================
+$img: '../img/';
+
+// ==============================
+// Color Palette
+// https://material.io/design/color/the-color-system.html#tools-for-picking-colors
+// ==============================
+$siro: #fff;
+$kuro: #000;
+
+$mono-50 : #f7f7f7;
+$mono-100 : #f5f5f5;
+$mono-150 : #f0f0f0;
+$mono-200 : #eee;
+$mono-250 : #ddd;
+$mono-300 : #ccc;
+$mono-350 : #bbb;
+$mono-400 : #aaa;
+$mono-450 : #999;
+$mono-500 : #888;
+$mono-600 : #666;
+$mono-700 : #444;
+$mono-800 : #333;
+$mono-900 : #222;
+
+$bluegray-50: #ECEFF1;
+$bluegray-100: #CFD8DC;
+$bluegray-200: #B0BEC5;
+$bluegray-300: #90A4AE;
+$bluegray-400: #78909C;
+$bluegray-500: #607D8B;
+$bluegray-600: #546E7A;
+$bluegray-700: #455A64;
+$bluegray-800: #37474F;
+$bluegray-900: #263238;
+
+$red-50: #FFEBEE;
+$red-100: #FFCDD2;
+$red-200: #EF9A9A;
+$red-300: #E57373;
+$red-400: #EF5350;
+$red-500: #F44336;
+$red-600: #E53935;
+$red-700: #D32F2F;
+$red-800: #C62828;
+$red-900: #B71C1C;
+$red-A700: #D50000;
+
+$purple-50: #EDE7F6;
+$purple-100: #D1C4E9;
+$purple-200: #B39DDB;
+$purple-300: #9575CD;
+$purple-400: #7E57C2;
+$purple-500: #673AB7;
+$purple-600: #5E35B1;
+$purple-700: #512DA8;
+$purple-800: #4527A0;
+$purple-900: #311B92;
+
+$blue-50: #E3F2FD;
+$blue-100: #BBDEFB;
+$blue-200: #90CAF9;
+$blue-300: #64B5F6;
+$blue-400: #42A5F5;
+$blue-500: #2196F3;
+$blue-600: #1E88E5;
+$blue-700: #1976D2;
+$blue-800: #1565C0;
+$blue-900: #0D47A1;
+
+$blue-main: #06a1e3;
+$blue-sub1: #edfaff;
+$blue-sub2: #ccefff;
+
+$green-50: #E8F5E9;
+$green-100: #C8E6C9;
+$green-200: #A5D6A7;
+$green-300: #81C784;
+$green-400: #66BB6A;
+$green-500: #4CAF50;
+$green-600: #43A047;
+$green-700: #388E3C;
+$green-800: #2E7D32;
+$green-900: #1B5E20;
+
+$green-main: #33b88c;
+$green-sub1: #00a66f;
+$green-sub2: #00b4c3;
+$green-sub3: #2ebc8e;
+$green-sub4: #7ce6c4;
+$green-sub5: #c5efe2;
+$green-sub6: #52c6a0;
+$green-sub7: #efffed;
+$green-sub8: #edf9f5;
+$green-grade1: linear-gradient(to right, $green-sub3 0%, $green-sub4 100%);
+$green-grade2: linear-gradient(to right, #00b579 0%, #55d9ae 100%);
+
+$orange-50: #FFF3E0;
+$orange-100: #FFE0B2;
+$orange-200: #FFCC80;
+$orange-300: #FFB74D;
+$orange-400: #FFA726;
+$orange-500: #FF9800;
+$orange-600: #FB8C00;
+$orange-700: #F57C00;
+$orange-800: #EF6C00;
+$orange-900: #E65100;
+
+$orange-main: #e86716;
+$orange-sub1: #fa8f12;
+$orange-sub2: #fff9d9;
+$orange-sub3: #ffddaf;
+$orange-sub4: #fec22d;
+$orange-sub5: #ffe2cb;
+$orange-grade1: linear-gradient(to right, #ff7b53 0%, #ffab91 100%);
+
+$gradation-bg: linear-gradient(to right, #fffbb5 0%, #9ff6ff 100%);
+$gradation-title: linear-gradient(to right,#0087ea 0%, #0259be 100%);
+
+// ==============================
+// Color Useful
+// ==============================
+$c-text   : $kuro;
+$c-green01: #2eaab6;
+$c-green02: #e2f6f7;
+$c-green03: #3faf7f;
+$c-blue01:#0259be;
+$c-blue02:#0087ea;
+$c-blue03:#0099ea;
+$c-blue04: #3dade8;
+$c-red01:#e50000;
+$c-red02:#ed7a7a;
+$c-yellow01: #f8ba10;
+$c-yellow02: #ffd800;
+$c-yellow03: #fffbb5;
+$c-yellow04: #f8d063;
+$c-orange01: #e86716;
+$c-orange02: #f8ba10;
+$c-orange03: #fa9000;
+$c-purple01: #a769d0;
+$c-purple02: #7d45a3;
+$c-purple03: #9c59c9;
+
+$c-bg-green   : #e8fffd;
+$c-bg-green02 : #f2fffb;
+$c-bg-green03 : #e2f6f7;
+$c-bg-green04 : #f0f8f8;
+$c-bg-green05 : #C6F2F5;
+$c-bg-blue    : #f8fdff;
+$c-bg-blue02  : #edf7ff;
+$c-bg-red     : #fff5f5;
+$c-bg-orange  : #fff3e8;
+$c-bg-orange02: #ffeebf;
+$c-bg-yellow  : #fffde5;
+$c-bg-yellow02: #fffef2;
+$c-bg-yellow03: #fcf4e3;
+$c-bg-purple  : #fcf7ff;
+$c-bg-purple02: #f9f0ff;
+$c-bg-purple03: #f2e2fd;
+$c-bg-gray    : #f2f2f2;
+
+$c-border: #ddd;
+$c-marker: linear-gradient(transparent 60%, $c-yellow03 60%);
+
+// ==============================
+// Link, Button Color
+// ==============================
+$c-link    : $c-blue01;
+$c-visited : $c-blue01;
+$c-hover   : $orange-main;
+$c-active  : $orange-main;
+$c-focus   : $orange-main;
+$c-disabled: $mono-300;
+
+// ==============================
+// Breakpoint
+// ==============================
+$bp-xsp : 400px;
+$bp-pb  : 480px;
+$bp-sp  : 568px;
+$bp-tb  : 768px;
+$bp-pc  : 1024px;
+$bp-xpc : 1240px;
+$bp-xxpc : 1400px;
+$bp-xxxpc : 1640px;
+$bp-main: 960px;
+
+// ==============================
+// z-index
+// ==============================
+$z-map: (
+  'default': 'auto',
+  'main'   : 1,
+  'pageup' : 1,
+  'side'   : 25,
+  'popup'  : 50,
+  'overlay': 98,
+  'header' : 100,
+  'menu'   : 101,
+  'global' : 102,
+  'modal'  : 500,
+  'dialog' : 1000,
+);
+
+@function z($z-type: 'default') {
+  @return map-get($z-map, $z-type);
+}
+
+// ==============================
+// Other
+// ==============================
+$radius: 4px;
+$opacity: 0.7;
+$shadow-header: 0 0 20px rgba($kuro, 0.2);
+$shadow-block: 0 0 20px rgba($kuro, 0.1);
+$shadow-box  : 0 3px 6px rgba($kuro, 0.1);
+$shadow-tx  : 0 3px 6px rgba($kuro, 0.1);
+$shadow-btn  : 0 2px 0 rgba($kuro, 0.1);
+$header-height-pc: 120px;
+$header-height-sp: 80px;
+
+// ==================================================
+//
+// ==================================================
+$family-mincho: 'YuMincho', 'Yu Mincho', '游明朝', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+$family-gothic: '游ゴシック体', 'YuGothic', '游ゴシック', 'Yu Gothic Medium', 'Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
+$family-default: $family-gothic;
+$family-heading: $family-default;
+$family-title: '游ゴシック体', 'YuGothic', '游ゴシック', 'Yu Gothic Medium', 'Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
+

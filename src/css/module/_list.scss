@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.m-list {
+  margin: 2em auto;
+  padding-left: 1.5em;
+  font-size: 1.4rem;
+
+  @include gt-tb{
+    font-size: inherit;
+  }
+
+  >li {
+    margin: 0.5em auto;
+  }
+}
+
+.m-list01 {
+  @extend .m-list;
+
+  &::marker {
+    color: $mono-500;
+  }
+}

@@ -1,0 +1,24 @@
+//- e.g.
+//- nav(aria-label="Breadcrumb")
+//-   +breadcrumb([
+//-     ["Home", "/"],
+//-     ["About", "/about/"]
+//-   ])
+mixin breadcrumb(levels)
+  nav(aria-label="Breadcrumb").l-breadcrumb
+    .l-breadcrumb__main
+      ol.l-breadcrumb__list(itemscope itemtype="http://schema.org/BreadcrumbList")
+        each level, index in levels
+          - var count = index + 1
+          - var link = level[1]
+
+          li.l-breadcrumb__item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+
+            if count != levels.length
+              a.l-breadcrumb__link(href=link itemprop="item")
+                span(itemprop="name") #{level[0]}
+              meta(itemprop="position" content!=count)
+            else
+              a.l-breadcrumb__link(href=link itemprop="item" aria-current="page")
+                span(itemprop="name") #{level[0]}
+              meta(itemprop="position" content!=count)
