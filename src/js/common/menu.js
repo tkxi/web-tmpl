@@ -1,7 +1,6 @@
-/**
+/*
  * Menu
  */
-
 (function($) {
   const ua = navigator.userAgent.toLowerCase();
   let isiPhone = (ua.indexOf('iphone') > -1) && (ua.indexOf('ipad') == -1);
@@ -9,7 +8,7 @@
   let isSP = (isiPhone || isAndroid);
   let menuEvent = (isSP) ? 'orientationchange' : 'resize';
 
-  /**
+  /*
    * Header Menu Control
    */
   function checkMenuTrigger() {
@@ -25,7 +24,7 @@
   $('#menu').on('change', checkMenuTrigger);
   checkMenuTrigger();
 
-  /**
+  /*
    * Header Menu Hide
    */
   function hideMenu() {
@@ -37,7 +36,7 @@
   $(window).on(menuEvent, hideMenu);
   $('#nav-overlay').on('click', hideMenu);
 
-  /**
+  /*
    * Scroll header hide
    */
   let startPos = 0, currentPos = 0;

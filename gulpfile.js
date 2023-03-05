@@ -71,9 +71,15 @@ const src = {
     'src/js/lib/**/*.js',
     '!src/js/lib/**/-*.js',
   ],
+  'jsCommon'   : [
+    'src/js/common/*.js',
+    '!src/js/**/-*.js',
+    '!src/js/lib/**/*.js',
+  ],
   'js'   : [
     'src/js/**/*.js',
     '!src/js/**/-*.js',
+    '!src/js/common/**/*.js',
     '!src/js/lib/**/*.js',
   ]
 };
@@ -124,9 +130,7 @@ const fnPug = () => {
   const locals = {
   };
   return gulp
-    .src(src.pug, {
-      // since: gulp.lastRun(fnPug)
-    })
+    .src(src.pug)
     .pipe(plumber())
     .pipe(pug({
       locals: locals,
@@ -150,7 +154,10 @@ const fnCss = () => {
     .src(src.css, { sourcemaps: !production })
     .pipe(wait(500))
     .pipe(plumber())
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({
+      // outputStyle: 'compressed'
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
     .pipe(postcss(plugin))
     .pipe(gulp.dest(dest.css, { sourcemaps: './' }))
     .pipe(gulp.dest(htdocs.css, { sourcemaps: './' }));
@@ -167,16 +174,27 @@ const fnJsLib = () => {
 
 const fnJs = () => {
   return gulp
+    .src(src.jsCommon, {
+      sourcemaps: !production
+    })
+    .pipe(concat('script.js'))
+    .pipe(babel({
+      presets: ['@babel/preset-env']
+    }))
+    // .pipe(uglify({output: { comments: /^!/ }}))
+    .pipe(gulp.dest(dest.js, { sourcemaps: './' }))
+    .pipe(gulp.dest(htdocs.js, { sourcemaps: './' }));
+}
+
+const fnJsPage = () => {
+  return gulp
     .src(src.js, {
       sourcemaps: !production
     })
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/preset-env']
     }))
-    .pipe(concat('script.js'))
-    .pipe(uglify({
-      output: { comments: /^!/ }
-    }))
+    .pipe(gulp.dest(dest.js))
     .pipe(gulp.dest(dest.js, { sourcemaps: './' }))
     .pipe(gulp.dest(htdocs.js, { sourcemaps: './' }));
 }
@@ -232,9 +250,10 @@ exports.pug      = fnPug;
 exports.css      = fnCss;
 exports.jslib    = fnJsLib;
 exports.js       = fnJs;
+exports.jspage   = fnJsPage;
 exports.image    = fnImage;
 exports.php      = fnPhp;
 exports.watch    = fnWatch;
-exports.makefile = gulp.parallel(fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnImage, fnPhp);
-exports.build    = gulp.series(fnClean, fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnImage, fnPhp);
-exports.default  = gulp.series(fnClean, fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnImage, fnPhp, fnWatch);
+exports.makefile = gulp.parallel(fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnJsPage, fnImage, fnPhp);
+exports.build    = gulp.series(fnClean, fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnJsPage, fnImage, fnPhp);
+exports.default  = gulp.series(fnClean, fnCopy, fnFont, fnPug, fnCss, fnJsLib, fnJs, fnJsPage, fnImage, fnPhp, fnWatch);

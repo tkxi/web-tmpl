@@ -173,7 +173,7 @@ function wp_get_cat_archives($opts, $cat) {
 
 // ギャラリーにクラス追加
 function add_class_images($content){
-  $my_custom_class = "is-modaal-img";
+  $my_custom_class = "js-modaal-img";
   $add_class = str_replace('<img class="', '<img class="'.$my_custom_class.' ', $content);
   return $add_class;
 }

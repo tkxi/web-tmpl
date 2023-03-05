@@ -1,3 +1,6 @@
+/*
+ * Scroll Animation (use plugin)
+ */
 (function($) {
   $(function() {
     // Scroll Animation

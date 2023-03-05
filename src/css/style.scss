@@ -1,11 +1,6 @@
 @charset 'utf-8';
 @use 'sass:math';
 
-/**
- * style.css
- *
-**/
-
 // ========================================
 // BASE
 // ========================================
@@ -13,8 +8,8 @@
 @import 'base/mixins';
 @import 'base/normalize';
 @import 'base/base';
-@import 'base/wp-default';
 @import 'base/animation';
+// @import 'base/wp-default';
 // @import 'base/slick';
 // @import 'base/slick-theme';
 // @import 'base/modaal';
@@ -47,7 +42,7 @@
 @import 'module/list';
 @import 'module/map';
 @import 'module/mov';
-@import 'module/mw_wp_form';
+// @import 'module/mw_wp_form';
 @import 'module/pagination';
 @import 'module/paragraph';
 @import 'module/section';
@@ -67,8 +62,8 @@
 // ========================================
 // @import 'utility/**/*.scss';
 @import 'utility/align';
-@import 'utility/margin';
-@import 'utility/font';
-@import 'utility/show';
 @import 'utility/clearfix';
+@import 'utility/font';
+// @import 'utility/margin';
+@import 'utility/show';
 // @import 'utility/size';

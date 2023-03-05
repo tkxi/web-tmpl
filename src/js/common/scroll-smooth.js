@@ -1,7 +1,6 @@
-/**
- * Anchor Smooth Scroll
+/*
+ * Scroll Smooth
  */
-
 (function($) {
   let scrollableElement;
   let FF = navigator.userAgent.match(/Firefox\/([0-9]+)\./);
@@ -72,5 +71,4 @@
       $globalPageup.removeClass('active');
     }
   });
-
 })(jQuery);

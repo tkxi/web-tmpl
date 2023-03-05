@@ -1,6 +1,8 @@
+/*
+ * Form
+ */
 (function($) {
   $(function() {
-    // Inquiry Form
     function checkAgree() {
       var $submit = $('#submit, .js-submit, [name="submitConfirm"]');
       var $agree = $('#agree, .js-agree');

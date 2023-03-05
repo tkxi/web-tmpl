@@ -1,8 +1,10 @@
+/*
+ * Modaal
+ */
 (function($) {
   $(function() {
-    // Modal
-    $('.is-modaal').modaal();
-    $('.is-modaal-img').modaal({
+    $('.js-modaal').modaal();
+    $('.js-modaal-img').modaal({
       type: 'image'
     });
 
